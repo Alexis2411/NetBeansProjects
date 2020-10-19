@@ -5,19 +5,20 @@
  */
 package Interfaz;
 
-import herenciaselccionfutbol.*;
+import PSeleccionFutbol.Main;
+import PSeleccionFutbol.Futbolista;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Alexis Javier Roman
  */
-public class AñadirEntrenador extends javax.swing.JFrame {
+public class AñadirFutbolista extends javax.swing.JFrame {
 
     /**
-     * Creates new form AñadirEntrenador
+     * Creates new form AñadirFutbolista
      */
-    public AñadirEntrenador() {
+    public AñadirFutbolista() {
         initComponents();
     }
 
@@ -30,33 +31,46 @@ public class AñadirEntrenador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtIDfederacion = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jTextField3 = new javax.swing.JTextField();
+        txtDorsal = new javax.swing.JTextField();
+        txtDemarcacion = new javax.swing.JTextField();
         txtID = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         txtApellidos = new javax.swing.JTextField();
         txtEdad = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
+        jTextField3.setText("jTextField3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel2.setText("ID Federacion");
+        txtDorsal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDorsalActionPerformed(evt);
+            }
+        });
+
+        txtDemarcacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDemarcacionActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Dorsal");
+
+        jLabel2.setText("Demarcacion");
 
         jLabel3.setText("ID");
 
         jLabel4.setText("Nombre");
 
         jLabel5.setText("Apellidos");
-
-        txtIDfederacion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIDfederacionActionPerformed(evt);
-            }
-        });
 
         jLabel6.setText("Edad");
 
@@ -74,6 +88,7 @@ public class AñadirEntrenador extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(131, 131, 131)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -81,7 +96,8 @@ public class AñadirEntrenador extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(txtIDfederacion, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                    .addComponent(txtDorsal, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                    .addComponent(txtDemarcacion)
                     .addComponent(txtID)
                     .addComponent(txtNombre)
                     .addComponent(txtApellidos)
@@ -90,14 +106,18 @@ public class AñadirEntrenador extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(155, 155, 155))
+                .addGap(173, 173, 173))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtIDfederacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDorsal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDemarcacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -115,37 +135,43 @@ public class AñadirEntrenador extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addGap(36, 36, 36))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtIDfederacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDfederacionActionPerformed
+    private void txtDorsalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDorsalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtIDfederacionActionPerformed
+    }//GEN-LAST:event_txtDorsalActionPerformed
+
+    private void txtDemarcacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDemarcacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDemarcacionActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int auxIdFederacion = Integer.parseInt(txtIDfederacion.getText());  
+        int auxDorsal = Integer.parseInt(txtDorsal.getText());
+        String auxDemarcacion = txtDemarcacion.getText();
         int auxId = Integer.parseInt(txtID.getText());
         String auxNombre = txtNombre.getText();
         String auxApellidos = txtApellidos.getText();
         int auxEdad = Integer.parseInt(txtEdad.getText());
 
-        Entrenador entrenador = new Entrenador(auxIdFederacion, auxId, auxNombre, auxApellidos, auxEdad);
-        HerenciaSelccionFutbol.Seleccion.add(entrenador);
+        Futbolista futbolista = new Futbolista(auxDorsal, auxDemarcacion, auxId, auxNombre, auxApellidos, auxEdad);
+        Main.Seleccion.add(futbolista);
         
-        JOptionPane.showMessageDialog(null, "El Entrenador se agrego con exito !!!!");
+        JOptionPane.showMessageDialog(null, "El Futbolista se agrego con exito !!!!");
         
         this.dispose();
         
-        txtIDfederacion.setText("");
+        txtDorsal.setText("");
+        txtDemarcacion.setText("");
         txtID.setText("");
         txtNombre.setText("");
         txtApellidos.setText("");
-        txtEdad.setText("");        // TODO add your handling code here:
+        txtEdad.setText("");// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -165,35 +191,38 @@ public class AñadirEntrenador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AñadirEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AñadirFutbolista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AñadirEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AñadirFutbolista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AñadirEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AñadirFutbolista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AñadirEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AñadirFutbolista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AñadirEntrenador().setVisible(true);
+                new AñadirFutbolista().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField txtApellidos;
+    private javax.swing.JTextField txtDemarcacion;
+    private javax.swing.JTextField txtDorsal;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtID;
-    private javax.swing.JTextField txtIDfederacion;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }

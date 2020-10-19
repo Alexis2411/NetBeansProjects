@@ -5,7 +5,11 @@
  */
 package Interfaz;
 
-import herenciaselccionfutbol.*;
+import PSeleccionFutbol.Masajista;
+import PSeleccionFutbol.Entrenador;
+import PSeleccionFutbol.SeleccionFutbol;
+import PSeleccionFutbol.Futbolista;
+import PSeleccionFutbol.Main;
 import javax.swing.JOptionPane;
 
 /**
@@ -273,7 +277,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Futbolista){
                 JOptionPane.showMessageDialog(null, "El jugador: " + seleccionf.getNombre() + " " + seleccionf.Viajar());
             }
@@ -281,7 +285,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Futbolista){
                 JOptionPane.showMessageDialog(null, "El entrenador: " + seleccionf.getNombre() + " " + seleccionf.Concentrarse());
             }
@@ -289,7 +293,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Masajista){
                 JOptionPane.showMessageDialog(null, "El masajista: " + seleccionf.getNombre() + " " + seleccionf.Concentrarse());
             }
@@ -297,7 +301,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
     private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Masajista){
                 JOptionPane.showMessageDialog(null, "El masajista: " + seleccionf.getNombre() + " " + seleccionf.PartidoFutbol());
             }
@@ -305,7 +309,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem17ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Futbolista){
                 JOptionPane.showMessageDialog(null, "El jugador: " + seleccionf.getNombre() + " " + seleccionf.Concentrarse());
             }
@@ -313,7 +317,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Futbolista){
                 JOptionPane.showMessageDialog(null, "El jugador: " + seleccionf.getNombre() + " " + seleccionf.Entrenamiento());
             }
@@ -321,7 +325,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Futbolista){
                 JOptionPane.showMessageDialog(null, "El jugador: " + seleccionf.getNombre() + " " + seleccionf.PartidoFutbol());
             }
@@ -329,7 +333,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Futbolista){
                 JOptionPane.showMessageDialog(null, "El jugador: " + seleccionf.getNombre() + " " + ((Futbolista) seleccionf).Entrevista());
             }
@@ -337,7 +341,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Entrenador){
                 JOptionPane.showMessageDialog(null, "El entrenador: " + seleccionf.getNombre() + " " + seleccionf.Viajar());
             }
@@ -345,7 +349,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Entrenador){
                 JOptionPane.showMessageDialog(null, "El entrenador: " + seleccionf.getNombre() + " " + seleccionf.Entrenamiento());
             }
@@ -353,7 +357,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Entrenador){
                 JOptionPane.showMessageDialog(null, "El entrenador: " + seleccionf.getNombre() + " " + seleccionf.PartidoFutbol());
             }
@@ -361,7 +365,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Entrenador){
                 JOptionPane.showMessageDialog(null, "El entrenador: " + seleccionf.getNombre() + " " + ((Entrenador) seleccionf).PlanificarEntrenamiento());
             }
@@ -369,7 +373,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Masajista){
                 JOptionPane.showMessageDialog(null, "El masajista: " + seleccionf.getNombre() + " " + seleccionf.Viajar());
             }
@@ -377,7 +381,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Masajista){
                 JOptionPane.showMessageDialog(null, "El masajista: " + seleccionf.getNombre() + " " + seleccionf.Entrenamiento());
             }
@@ -385,7 +389,7 @@ public class MenuSeleccionFutbol extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem16ActionPerformed
 
     private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
-        for (SeleccionFutbol seleccionf: HerenciaSelccionFutbol.Seleccion){
+        for (SeleccionFutbol seleccionf: Main.Seleccion){
             if(seleccionf instanceof Masajista){
                 JOptionPane.showMessageDialog(null, "El masajista: " + seleccionf.getNombre() + " " + ((Masajista) seleccionf).DarMasaje());
             }

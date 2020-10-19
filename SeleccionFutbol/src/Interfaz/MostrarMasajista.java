@@ -5,19 +5,21 @@
  */
 package Interfaz;
 
-import herenciaselccionfutbol.*;
+import PSeleccionFutbol.Masajista;
+import PSeleccionFutbol.SeleccionFutbol;
+import PSeleccionFutbol.Main;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Alexis Javier Roman
  */
-public class MostrarEntrenador extends javax.swing.JFrame {
+public class MostrarMasajista extends javax.swing.JFrame {
 
     /**
-     * Creates new form MostrarEntrenador
+     * Creates new form MostrarMasajista
      */
-    public MostrarEntrenador() {
+    public MostrarMasajista() {
         initComponents();
     }
 
@@ -76,25 +78,26 @@ public class MostrarEntrenador extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         DefaultTableModel modelo = new DefaultTableModel();
         
-        modelo.addColumn("ID Federacion");
+        modelo.addColumn("Titulacion");
+        modelo.addColumn("Años Experiencia");
         modelo.addColumn("ID");
         modelo.addColumn("Nombre");
         modelo.addColumn("Apellido");
         modelo.addColumn("Edad");
           
-        for(SeleccionFutbol seleccion : HerenciaSelccionFutbol.Seleccion)  {
-            if (seleccion instanceof Entrenador){ 
-            Object [] fila = new Object[5];
-                fila[0] = ((Entrenador) seleccion).getIdFederacion();
-                fila[1] = seleccion.getId();
-                fila[2] = seleccion.getNombre();
-                fila[3] = seleccion.getApellidos();
-                fila[4] = seleccion.getEdad();
+        for(SeleccionFutbol seleccion : Main.Seleccion)  {
+            if (seleccion instanceof Masajista){ 
+            Object [] fila = new Object[6];
+                fila[0] = ((Masajista) seleccion).getTitulacion();
+                fila[1] = ((Masajista) seleccion).getAñosExperiencia();
+                fila[2] = seleccion.getId();
+                fila[3] = seleccion.getNombre();
+                fila[4] = seleccion.getApellidos();
+                fila[5] = seleccion.getEdad();
                 modelo.addRow(fila);
             }
         }
-        jTable1.setModel(modelo);                             
-        // TODO add your handling code here:
+        jTable1.setModel(modelo);
     }//GEN-LAST:event_formWindowOpened
 
     /**
@@ -114,20 +117,20 @@ public class MostrarEntrenador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MostrarEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MostrarMasajista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MostrarEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MostrarMasajista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MostrarEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MostrarMasajista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MostrarEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MostrarMasajista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MostrarEntrenador().setVisible(true);
+                new MostrarMasajista().setVisible(true);
             }
         });
     }

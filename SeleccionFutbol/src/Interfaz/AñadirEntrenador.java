@@ -5,19 +5,20 @@
  */
 package Interfaz;
 
-import herenciaselccionfutbol.*;
+import PSeleccionFutbol.Entrenador;
+import PSeleccionFutbol.Main;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Alexis Javier Roman
  */
-public class AñadirMasajista extends javax.swing.JFrame {
+public class AñadirEntrenador extends javax.swing.JFrame {
 
     /**
-     * Creates new form AñadirMasajista
+     * Creates new form AñadirEntrenador
      */
-    public AñadirMasajista() {
+    public AñadirEntrenador() {
         initComponents();
     }
 
@@ -33,36 +34,28 @@ public class AñadirMasajista extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtTitulo = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txtAños = new javax.swing.JTextField();
+        txtIDfederacion = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         txtID = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         txtApellidos = new javax.swing.JTextField();
         txtEdad = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel2.setText("Años Experiencia");
+        jLabel2.setText("ID Federacion");
 
         jLabel3.setText("ID");
 
         jLabel4.setText("Nombre");
 
-        txtTitulo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTituloActionPerformed(evt);
-            }
-        });
-
         jLabel5.setText("Apellidos");
 
-        txtAños.addActionListener(new java.awt.event.ActionListener() {
+        txtIDfederacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAñosActionPerformed(evt);
+                txtIDfederacionActionPerformed(evt);
             }
         });
 
@@ -75,8 +68,6 @@ public class AñadirMasajista extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Titulacion");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -84,7 +75,6 @@ public class AñadirMasajista extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(131, 131, 131)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -92,8 +82,7 @@ public class AñadirMasajista extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAños)
+                    .addComponent(txtIDfederacion, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
                     .addComponent(txtID)
                     .addComponent(txtNombre)
                     .addComponent(txtApellidos)
@@ -102,18 +91,14 @@ public class AñadirMasajista extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(173, 173, 173))
+                .addGap(155, 155, 155))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIDfederacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -131,39 +116,33 @@ public class AñadirMasajista extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(36, 36, 36))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
+    private void txtIDfederacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDfederacionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtTituloActionPerformed
-
-    private void txtAñosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAñosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAñosActionPerformed
+    }//GEN-LAST:event_txtIDfederacionActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int auxAños = Integer.parseInt(txtAños.getText());
-        String auxTitulacion = txtTitulo.getText();
+        int auxIdFederacion = Integer.parseInt(txtIDfederacion.getText());  
         int auxId = Integer.parseInt(txtID.getText());
         String auxNombre = txtNombre.getText();
         String auxApellidos = txtApellidos.getText();
         int auxEdad = Integer.parseInt(txtEdad.getText());
 
-        Masajista masajista = new Masajista(auxTitulacion, auxAños, auxId, auxNombre, auxApellidos, auxEdad);
-        HerenciaSelccionFutbol.Seleccion.add(masajista);
+        Entrenador entrenador = new Entrenador(auxIdFederacion, auxId, auxNombre, auxApellidos, auxEdad);
+        Main.Seleccion.add(entrenador);
         
-        JOptionPane.showMessageDialog(null, "El Masajista se agrego con exito !!!!");
+        JOptionPane.showMessageDialog(null, "El Entrenador se agrego con exito !!!!");
         
         this.dispose();
         
-        txtTitulo.setText("");
-        txtAños.setText("");
+        txtIDfederacion.setText("");
         txtID.setText("");
         txtNombre.setText("");
         txtApellidos.setText("");
@@ -187,37 +166,35 @@ public class AñadirMasajista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AñadirMasajista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AñadirEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AñadirMasajista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AñadirEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AñadirMasajista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AñadirEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AñadirMasajista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AñadirEntrenador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AñadirMasajista().setVisible(true);
+                new AñadirEntrenador().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField txtApellidos;
-    private javax.swing.JTextField txtAños;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtID;
+    private javax.swing.JTextField txtIDfederacion;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtTitulo;
     // End of variables declaration//GEN-END:variables
 }
